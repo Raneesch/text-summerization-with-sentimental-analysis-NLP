@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Summarization with Sentiment Analysis</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="title">TEXT SUMMARIZATION WITH SENTIMENT ANALYSIS</h1>
+
+
+      <div class="text-container boxed">
+        <div class="box original-text">
+          <textarea class="form-control form-control-color" name="rawtext" rows="11"  >{{ og_txt }}</textarea>
+          <div class="numbers"><p>{{ len_org }}</p></div> <!-- Display original text length -->
+        </div>
+
+        <div class="arrow">
+          
+            <img src="{{ url_for('static', filename='images/Doodle Arrow PNG 1.png') }}" alt="Submit">
+          
+        </div>
+
+        <div class="box summarized-text">
+          <!-- Display the summary here if it exists -->
+          <textarea class="form-control color2" rows="11"  readonly>{{ summarized_text }}</textarea>
+          <div class="numbers"><p>{{ len_sum }}</p></div> <!-- Display summarized text length -->
+        </div>
+      </div>
+
+
+    <div class="footer-text">
+      <p class="foot-b">sentiment analysis score</p>
+      <p class="foot-a">Sentiment: {{ label }}</p>
+      <p class="foot-c">Score: {{ score }}</p>
+    </div>
+  </div>
+
+  <!-- <div class="text-start">
+    <form action="/home" method="GET">
+    <button type="button" class="btn " id="btn_r" name="sentiment-btn" type="submit" value="submit"><</button>
+    </form>
+  </div> -->
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Summarization with Sentiment Analysis</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="title">TEXT SUMMARIZATION WITH SENTIMENT ANALYSIS</h1>
+
+    <form action="/summarize" method="POST">
+      <div class="text-container boxed">
+        <div class="box original-text">
+          <textarea class="form-control form-control-color" name="rawtext" rows="11" placeholder="Text Editor"></textarea>
+          <div class="numbers"><p>{{ len_org }}</p></div> <!-- Display original text length -->
+          <div class="arrow">
+            <button class="btn" type="submit" name="summarize-btn">
+              <img src="{{ url_for('static', filename='images/Doodle Arrow PNG 1.png') }}" alt="Submit">
+            </button>
+          </div>
+        </div>
+    </form>
+
+ 
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
